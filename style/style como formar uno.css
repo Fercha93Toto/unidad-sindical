@@ -1,0 +1,487 @@
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.6;
+    color:#333;
+}
+
+/* --- Estilos para el menú desplegable en la Navbar ---*/
+/* Colores de fondo de la Navbar */
+.navbar {
+    background-color: #BB575B !important; /*Fondo de la barra de navegació */
+}
+
+.navbar-logo {
+    height: 80px; /* Ajusta la altura de tu logo según tus necesidades */
+    width: auto; /* Mantiene la proporción de la imagen */
+    margin-right: 10px; /*Espacio a la derecha del ogo si hay texto o elementros al lado */
+}
+
+.navbar-brand, .nav-link {
+    color: #202021 !important; /* Texto negro para los enclaces de navbar */
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    color: #FBCA30 !important; /* Texto amarillo para los enclaces de navbar */
+    font-family: strong;
+}
+
+/* Estilo general para los dropdown-menu (todos los niveles) */
+.dropdown-menu {
+    background-color: #F7E29D; /* Fondo amarillos claro para los menús */
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 0; /* Quitar padding por defecto para controlar los item */
+}
+
+/* Estilo para los items individuales dentro del cualquier dropdown-menu */
+.dropdown-item {
+    color:#333; /* Color de texto negro */
+    padding: 0.75rem 1.25rem; /* Relleno */
+    text-decoration: none;
+    display: block; /* Para que ocupe todo el ancho */
+    transition: background-color 0.3s ease-in-out;
+    white-space: nowrap; /* vita que es texto se rompa */
+}
+
+.dropdown-item:hover{
+    background-color: #FBCA30; /* Fondo amarillo intenso al pasar el ratón */
+    Color: #202021 !important; /* texto negro */
+}
+
+/* --- Estilos especificos para los submenús animados (2do, 3er, nivel, etc) ---*/
+
+.dropdown-submenu {
+    position: relative; /* Crucial para posiciona el submenú anidado */
+}
+
+.dropdown-submenu > .dropdown-menu {
+    top: 0; /* Alinea la parte superior del submenú con la del elememto padre */
+    left: 100%; /*Coloca el submenu a la derecha del elemento padre */
+    margin-top: 0px; /* Ajueste fino para alineación vertical */
+    margin-left: 0px; /* Ajuste fino para alinear horizaontal */
+    display: none; /* Oculta el submenú por defecto */
+} 
+
+/* Mostrar el submenú anidado al pasar el ratón */
+.dropdown-submenu:hover > .dropdown-menu {
+    display: block; /* Muestra el submenú al hacer hover sobre el li.dropdown-submenu */
+}
+
+/* Asegúrate de que los estilos section-title y section-description existe y son correctos */
+.section-title {
+    font-size: 2rem; /* Tamaño de la fuente */
+    font-weight: bold;
+    color:#4B0014;
+    margin-bottom: 1rem;
+}
+
+.section-description {
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+    color:#202021;
+    margin-bottom: 1rem; /* Añadir un margen inferior para separar pàrrafos */
+    text-align: justify; /*Importante para justificar el texto */
+}
+
+/* Estilos para los icono de martillo (Bootstrap Icons) en la lista */
+.icon-text-wrapper {
+    display: flex;
+    align-items: center; /* Centra verticalmente el ícono dentro de su wrapper */
+    justify-content: flex-start; /* Centra horizontalmente el ícnono */
+    flex-shrink: 0; /* Evita que el wrapper se encoja */
+    width: auto; /* Ancho fijo para el contenerdo del ícono */
+    margin-right: 15px; /* Espacio entre el ícono y el texto */
+    transition: transform 0.3s ease-out; /* Transición para el el efecto de escala */
+}
+
+/* Color y tamaño base del ícono de cono */
+.icon-text-wrapper .bi-cone-striped {
+    font-size: 28px; /* Tamaño del ícono de martillo */
+    color:#4b0014; /* Color rojo para el ícono */
+    transition: font-size 0.9 ease-out; /* Transición para el cambio de tamaño del ícono */
+}
+/* Efecto Hover para los iconos de martillo (aplica al wrapper) */
+.icon-text-wrapper:hover {
+    transform: scale(1.5); /* Aumenta el tamaño del contenedor de ícono */    
+}
+
+/* Efecto hover para el ícono específico */
+.icon-text-wrapper:hover .bi-cone-striped {
+    font-size: 32px; /* O un poco más grande que la base, para un efecto de zoom en el ícono */
+    color:#EC3D2C; /* Un rojo ligeramente más oscuro o brillante para el hover */
+}
+/* Clase para el efecto de scroll down (se aplica con JavaScrip) */
+/* Esta clase se aplicará al .icono-text-wrapper (el contenedor del ícono) */
+.icon-text-wrapper-scrolled {
+    transform: scale(1.5); /* Aumenta más el tamaño del ícno el hacer scroll */
+}
+
+/* Asegura que el color del ícono se mantenga rojo o cambie a un rojo especifico al hacer el scroll */
+.icon-text-wrapper-scrolled .bi-striped {    
+color: #EC3D2C; /* Puedes mantener este rojo (el que teías)
+font-size: 35px; /* Cambio: hacer e ícono más grande aún al hacer scrollo para más enfasis */
+}
+
+/* Estilos para la lista numerada personalizada */
+.numbered-list {
+    counter-reset: my-awesome-counter; /*Inicializa un contador personalizado para que los números empiecen de nuevo */
+    padding-left: 0; /* Elimina el padding izquierdo predeterminado de la lista HTM */
+    list-style: none; /* Asegura que le navegador no agregue sus propios marcadores de lista */
+}
+
+.numbered-list li {
+    list-style: none; /* Elimina cualquier estilo de lista residual */
+    position: relative; /* Esencial para posicionar el número grande ** Ajusta según el tamaño final del número. */
+    padding-left: 80px; /* Aumente este padding para dar espacio al núumero grande. Ajusta según el tamaño final del número y la imagen */
+    margin-bottom: 20px; /* Espacio estre cada punto de la lista para una mejor legibilidad */
+    display: flex; /* Usa flexbox para alinear el número y el texto al inicio de la lista */
+    align-items: flex-start; /* Alinea el número y el texto al inicio de la línea */
+    transition: transform 0.3s ease-out; /* Transición para el efecto de la escala en el li (simulando el wrapper) */
+}
+
+.numbered-list li::before {
+    counter-increment: my-awesome-counter; /* Incrementa el contador para cada uno <li> */
+    content: counter(my-awesome-counter) "."; /* Muestra el número seguido de un punto */
+    color:#4B0014; /* Color vino tinto para los números */
+    font-weight: bold; /* Hace el número más gruso */
+    font-size: 1.5em; /* Hace el número más grande */
+    position: absolute; /* Posiciona el número de formar absoluta dentro del <li> */
+    left: 0; /* Lo coloca al inicio del padding-left del <li> */
+    top: 0; /* Lo alinea con la parte superior del texto */
+    line-height: 1; /* Ajusta la altura de línea del número para que no interfiera con el texto */
+    transition: font-size 0.3s ease-out, color 0.3s ease-out, transform 0.3s ease-out; /* Transiciones suaves */
+    transform-origin: center left; /* Punto de origen para la transformación si se escala */
+}
+
+.numbered-list li p {
+    margin-bottom: 0; /* Elimine el margen inferior por defecto de los párrafos dentro de los li */
+    /* Asegura que el texto se ajusta el espacio restante */
+}
+
+/* --- Efecto hover para los números específicos dentro del li (simulando el .bi-hammer:hover) ---*/
+.numbered-list li:hover {
+    transform: scale(1.03); /* Un ligero aumento de tamaño para todo el item de la lista en hover */
+}
+
+/* Efecto hover para el númreo especifico dentro del li (simulando el -bi-hammer:hover) */
+.numbered-list li:hover::before {
+    font-size: 2em; /* Hace el número un poco más grande en hover */
+    color:#EC3D2C; /* Un rojo más brillante para el hover */
+    transform: scale(1.1); /* Escala ligeramente*/
+}
+
+/* Sección de ladrillos - Ajuste clave */
+.message-section-wrapper {
+    background-position: left center, right center;
+    box-sizing: border-box;
+    margin: 0; /* Asegura que no haya márgenes que los separen */
+    background-size: auto 200%; /* Ajusta según el diseño de tu fondo */
+    padding: 10px 0; /* Padding vertical para la sección completa */
+    min-height: 150px; /* Asegura una altura mínima para la sección */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Asegura que el wrapper ocupe todo el ancho disponible */
+}
+
+.message-container {
+    max-width: 1320px; /* Puedes ajustar un max-width general para tu contenido */
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px; /* Añade espacio horizontal para pantallas más pequeñas */
+}
+
+/* Nuevas clases para las imágenes de los ladrillos, si necesitas ajustar algo */
+.message-brick-left img,
+.message-brick-right img {
+    width: auto; /* Permite que el ancho se ajuste automáticamente */
+    height: auto; /* Asegura la escala vertical */
+    display: block; /* Para eliminar cualquier espacio extra debajo de la imagen */
+    max-width: 100%; /* Tamaño máximo para los ladrillos en computador de mesa */
+    max-width: 250px; 
+    object-fit: contain; /* Para que la imagen del ladrillo no se recorte si su proporción no encaja */
+}
+
+/* --- Link para los link del código sustantivo del trabajo --- */
+/* Asegúrate que de tu clase .info-block o el contenedor tenga flexbox para alinear el icono y el texto */
+.info-block {
+    display: flex;
+    align-items: center; /* Centra verticalmente el icono y el texto */
+    justify-content: flex-start; /*Alinea los items al inicio del contenedor */
+    padding: 10px 15px; /* Espacio entre el icono y el texto */
+    margin-bottom: 20px;
+}
+
+.info-block .icon-wrapper {
+    margin-right: 15px; /* Espacio entre el icono y el texto */
+    padding: 10px 15px;
+    align-items: center;
+}
+
+.info-block .icon-wrapper i {
+    font-size: 3em; /* Tamaño del icono */
+    color:#FBCA30; /* Color naranja para el icono */
+    transition: transform 0.2s ease-in-out, color 0.2s ease-in-out; /* Añadir trasición al color */
+}
+
+/* Estilos para que el enlace que envuelve el parrafo */
+.info-block .article-link {
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    color:#FBCA30; /* Color del texto */
+    display: flex; /* Para que el enlace se comporte como un contenedor flexible si tiene un p dentro */
+    align-items: center; /* Asegura que el párrafo dentro del enlace se alinee si el enlace es un flex container */
+    line-height: 1.3; /* Ajusta la altura de línea si es necesario */
+    flex-grow: 1; /* Permite que el enlace ocupe el espacio restante */
+}
+
+/* Estilos para el párrafo dentro del enlace */
+.info-block .article-link .article-text {
+    font-size: 1.1rem; /* Tamaño de fuente del texto del artìculo */
+    margin-bottom: 0; /* Elimina el marfen inferior predeterminado del párrafo */
+    line-height: 1.2; /* Ajusta la altura de línea si es necesario */
+}
+/* --- Efecto hover para el enlace --- */
+.info-block .article-link:hover {
+    color:#202021; /*Un tono un poco más oscuro al pasar el ratón */
+    text-decoration: underline; /* Puede añadir un subrrayado al pasar el ratón */
+}
+
+.info-block .article-link:hover .icon-wrapper {
+    transform: scale(1.1); /* Efecto de escala al icono en hover */
+    transition: tranform 0.2s ease-in-out; 
+}
+
+/* Info blog red */
+.info-block-red {
+    display: flex;
+    align-items: center; /* Centra verticalmente el icono y el texto */
+    justify-content: flex-start; /*Alinea los items al inicio del contenedor */
+    padding: 10px 15px; /* Espacio entre el icono y el texto */
+    margin-bottom: 20px;
+}
+
+.info-block-red .icon-wrapper {
+    margin-right: 15px; /* Espacio entre el icono y el texto */
+    padding: 10px 15px;
+    align-items: center;
+}
+
+.info-block-red .icon-wrapper i {
+    font-size: 3em; /* Tamaño del icono */
+    color:#EC3D2C; /* Color naranja para el icono */
+    transition: transform 0.2s ease-in-out, color 0.2s ease-in-out; /* Añadir trasición al color */
+}
+
+/* Estilos para que el enlace que envuelve el parrafo */
+.info-block-red .article-link {
+    text-decoration: none; /* Elimina el subrayado del enlace */
+    color:#EC3D2C; /* Color del texto */
+    display: flex; /* Para que el enlace se comporte como un contenedor flexible si tiene un p dentro */
+    align-items: center; /* Asegura que el párrafo dentro del enlace se alinee si el enlace es un flex container */
+    line-height: 1.3; /* Ajusta la altura de línea si es necesario */
+    flex-grow: 1; /* Permite que el enlace ocupe el espacio restante */
+}
+
+/* Estilos para el párrafo dentro del enlace */
+.info-block-red .article-link .article-text {
+    font-size: 1.1rem; /* Tamaño de fuente del texto del artìculo */
+    margin-bottom: 0; /* Elimina el marfen inferior predeterminado del párrafo */
+    line-height: 1.2; /* Ajusta la altura de línea si es necesario */
+}
+/* --- Efecto hover para el enlace --- */
+.info-block-red .article-link:hover {
+    color:#202021; /*Un tono un poco más oscuro al pasar el ratón */
+    text-decoration: underline; /* Puede añadir un subrrayado al pasar el ratón */
+}
+
+.info-block-red .article-link:hover .icon-wrapper {
+    transform: scale(1.1); /* Efecto de escala al icono en hover */
+    transition: tranform 0.2s ease-in-out; 
+}
+
+.work-section-background {
+    background-color: #E9D1D2; /* color rosa de fondo */
+    padding: 40px 20px; /* Un poco de relleno alrededor del contenido */
+    margin-bottom: 30px; /* Margen inferior para separarlo de la siguiente sección */
+}
+
+/* Ajustes opciones para los íconos en listas en Sindicato */
+.work-section-background-yellow {
+    background-color: #FDEAAC; /* color rosa de fondo */
+    padding: 40px 20px; /* Un poco de relleno alrededor del contenido */
+    margin-bottom: 30px; /* Margen inferior para separarlo de la siguiente */
+}
+
+.box {
+    color:#202021; /* Color de texto dentro de la caja */
+    font-style: italic; /* Cursiva para la fuente */
+}
+
+.box .source-text {
+    font-size: 0.9rem; /*Tamaño de fuente más pequeño para la fuente */
+    text-align: right; /* Alineación a la derecha como la imagen */
+    margin-top: 0rem; /* Espacio superior para separarlo de la cita */
+    color: #202021; /* Color rojo para la fuente */
+}
+ /* ------------------------- FOOTER -------------------------------*/
+
+.footer-section {
+    background-color:#202021;
+    padding: 40px 0; /* Añade espacio vertical */
+}
+
+.footer-logo {
+    height: 100px; /* Tamaño del logo en pantallas, se ajusta según lo que necesites */
+    width: auto;
+    max-width: 100%; /* Asegura que no se desborda */
+}
+
+/* Estilos para los títulos de las columnas de footer (la h5) */
+.footer-colum-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #f8f8f8; /* Este color podria ser sobrescrito por el color del enlace */
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+/* Nuevo estilo para los enlaces dentro de los títulos (para que mantengan el aspecto del título */
+.footer-link-title {
+    color: #cccccc; /* Hereda el color del padre (footer-colum-title o fotter-section) */
+    text-decoration: none; /* Elmina el subrayado por defecto */
+}
+
+.footer-link-title:hover {
+    color: #ffffff; /* Cambia a blanco al pasar el ratón */
+}
+
+/* Tus estilos existentes para los enlaces normales del footer */
+.footer-link {
+    color: #cccccc;
+    text-decoration: none;
+    font-size: 0.9rem;
+    line-height: 1.8;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #ffffff;
+}
+
+
+/* Ajuste para pantallas más pequeñas si los números grandes desorganizan el layout */
+@media (max-width: 767.98px) {
+    .navbar-logo {
+        height: 40px; /* Ajusta la altura de tu logo según tus necesidades */
+        width: auto; /* Mantiene la proporción de la imagen */
+        margin-right: 5px; /* Espacios a la derecha del logo si hay texto o elementos al lado */
+    }
+
+    .navbar-collapse {
+        background-color: #333; /* fondo oscuro para el menú movil */
+        padding: 1rem;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-mav .nav-item {
+        width: 100%;
+        margin-bottom: 0.25rem;
+    }
+    .navbar-nav .nav-link {
+        padding: 0.75rem 1rem;
+        background-color: #f8f9fa; /* fondo más claro para los links en movil */
+        color: #333 !important;
+        border-radius: 0.25rem;
+        text-align: center;
+    }
+    .navbar-nav .dropdown-menu {
+        position: static !important;
+        transform: none !important;
+        width: 100%;
+        margin-top: 0.25rem;
+        border: none;
+        box-shadow: none;
+        background-color: #f8f9fa; /* fondo más claro para el dropdowns en el menú */
+    }
+    .navbar-nav .dropdown-toggle {
+        background-color: #f8f9fa;
+        color: #333 !important;
+    }
+    .dropdown-submenu > .dropdown-menu {
+        position: static !important;
+        transform: none !important;
+        left: auto !important;
+        margin-top: 0 !important;
+        margin-left: 0 !important;
+        border: none;
+        box-shadow: none;
+        background-color: #f8f9fa;
+        padding-left: 1rem;
+    }
+    .numbered-list li {
+        padding-left: 45px; /* Reduce el padding en móviles */
+        margin-bottom: 15px;
+    }
+
+    .numbered-list li::before {
+        font-size: 2em; /* Hace los número un poc más pequeños en móviles */
+    }
+
+    .icon-text-wrapper .bi-hammer {
+        font-size: 24px; /* Un poco más pequeño en móviles */
+    }
+
+    .message-brick-left img,
+    .message-brick-right img {
+        max-height: 180px; /* Ladrillos un poco más pequeños en tablets */
+        max-width: 90px;
+    }
+
+       /* Footer adjustments for mobile */
+
+    .footer-logo {
+        height: 60px; /* Tamaño más pequeño para logo en móviles */
+        width: auto;
+    }
+
+    .footer-section .col-md-4 { /* Ajusta según la estructura de tu footer */
+        text-align: center !important;
+    }
+
+    .footer-colum-title {
+        text-align: center;
+        margin-top: 1.5rem;
+    }
+
+    .footer-link {
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /* Tablet adjustments */
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    /* Message section adjustments for tablets */
+    .message-section-wrapper {
+        padding: 20px; /* Add more horizontal padding */
+    }
+}
+
+/* General improvements for larger screens (desktop first approach or just refining) */
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .dropdown-menu {
+        margin-top: 0; /* Reset margin for larger screens */
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.175); /* Restore dropdown shadow */
+    }
+    .dropdown-submenu:hover > .dropdown-menu {
+        display: block;
+    }
+}

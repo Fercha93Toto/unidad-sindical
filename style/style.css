@@ -1,0 +1,683 @@
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.6;
+    color:#333;
+}
+
+/* --- Estilos para el menú desplegable en la Navbar ---*/
+/* Colores de fondo de la Navbar */
+.navbar {
+    background-color: #BB575B !important; /*Fondo de la barra de navegació */
+}
+
+.navbar-logo {
+    height: 80px; /* Ajusta la altura de tu logo según tus necesidades */
+    width: auto; /* Mantiene la proporción de la imagen */
+    margin-right: 10px; /*Espacio a la derecha del ogo si hay texto o elementros al lado */
+}
+
+.navbar-brand, .nav-link {
+    color: #202021 !important; /* Texto negro para los enclaces de navbar */
+    font-weight: bold;
+}
+
+.nav-link:hover {
+    color: #FBCA30 !important; /* Texto amarillo para los enclaces de navbar */
+    font-family: strong;
+}
+
+/* Estilo general para los dropdown-menu (todos los niveles) */
+.dropdown-menu {
+    background-color: #F7E29D; /* Fondo amarillos claro para los menús */
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 0; /* Quitar padding por defecto para controlar los item */
+}
+
+/* Estilo para los items individuales dentro del cualquier dropdown-menu */
+.dropdown-item {
+    color:#333; /* Color de texto negro */
+    padding: 0.75rem 1.25rem; /* Relleno */
+    text-decoration: none;
+    display: block; /* Para que ocupe todo el ancho */
+    transition: background-color 0.3s ease-in-out;
+    white-space: nowrap; /* vita que es texto se rompa */
+}
+
+.dropdown-item:hover{
+    background-color: #FBCA30; /* Fondo amarillo intenso al pasar el ratón */
+    Color: #202021 !important; /* texto negro */
+}
+
+/* --- Estilos especificos para los submenús animados (2do, 3er, nivel, etc) ---*/
+
+.dropdown-submenu {
+    position: relative; /* Crucial para posiciona el submenú anidado */
+}
+
+.dropdown-submenu > .dropdown-menu {
+    top: 0; /* Alinea la parte superior del submenú con la del elememto padre */
+    left: 100%; /*Coloca el submenu a la derecha del elemento padre */
+    margin-top: 0px; /* Ajueste fino para alineación vertical */
+    margin-left: 0px; /* Ajuste fino para alinear horizaontal */
+    display: none; /* Oculta el submenú por defecto */
+} 
+
+/* Mostrar el submenú anidado al pasar el ratón */
+.dropdown-submenu:hover > .dropdown-menu {
+    display: block; /* Muestra el submenú al hacer hover sobre el li.dropdown-submenu */
+}
+
+/* --- Estilos para el carousel (Slider) --- */
+.carousel-item {
+    height: 70vh; /* Altura del slider, ajusta según sea necesario */
+    min-height: 400px; /* Altura mínima para pantallas pequeñas */
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    position: relative; /* Para posicionar el caption */
+
+}
+
+.carousel-img {
+    height: 100%;
+    width: 100%;  /* para asegurar que la imagen ocupa el container */
+    object-fit: cover; /* Asegurar que la imagen cubra el contenedor sin distorcionarse */
+    filter: brightness(60%); /* Oscurece la imagen para que el texto sea más legible */ 
+}
+
+.carousel-caption {
+    top: 20%;
+    transform: translateY (-50%);
+    bottom: auto;
+    left: 0;
+    right: 0;
+    padding: 0 15px; /* Añade un poco de espacio a los lados */
+}
+
+.carousel-caption h5{
+    font-size: 3rem; /* Tamaño de la fuente del título, ajusta según necesidades */
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para mejorar legitimidad */
+}
+
+.carousel-caption .btn-lg {
+    padding: 15px 30px;
+    font-size: 1.25rem;
+    border-width: 2px;
+    font-weight: bold;
+    margin-top: 20px; /* Espacios entre títulos y botón */
+    border-radius: 5px; /* Bordes ligeramente redondeados */
+    background-color: Transparent; /* Botón transpatente */
+    color: white; /* Texto blanco del botón */
+    border-color: white /* Borde blanco del botón */
+}
+
+.carousel-caption .btn-lg:hover {
+    background-color: rgba(255, 255, 255, 0.2);  /*Ligero fondo al pasar el ratón */
+    color:white;
+    Border-color: white;
+}
+
+/* Colores de los indicadores del carousel (los punto sde abajo) */
+.carousel-indicators [data-bs-target] {
+    background-color: #fff; /* Puntos blancos */
+    border-radius: 50%;
+    width: 12px; /* Tamaño de los puntos */
+    height: 12px;
+    margin: 0 4px;
+    opacity: 0.7;
+    transition: width 0.3s ease, background-color 0.3 ease; /* Añade una transición con efecto suave */ 
+}
+
+.carousel-indicators .active {
+    opacity: 1;
+    background-color: #BB575B; /* Punto activo rojo */
+    width: 30px; /* Indicado activo más amplio */
+}
+
+/* --- Estilos para la sección de contenido principal (Objetos y principios) --- */
+.container {
+    padding: 0 15px; /* Asegura un padding consistente */
+}
+
+/* Estilos para la cuadrícula de principios */
+.principles-grid {
+    margin-top: 40px;
+}
+
+.principle-item {
+    position: relative; /* Esencial para que el overlay se posiciona realtivo a este */
+    overflow: hidden; /* Importante para que la imagen se agrande sin sairse del contenedor */
+    display: flex;
+    justify-content: center; /* Centra horizontalmente la imagen */
+    align-items: center; /* Centra verticalmente la imagen */
+    flex-direction: column;
+    text-align: center;
+    border-radius: 2px; /*Bordes redondeados */
+    box-shadow: 0 4px 15px rgba(0, 0, 9, 0.1);
+    transition: transform 0.3s ease-i-out; /* transición para el efecto de agrandar el item completo */
+}
+
+.principle-item img {
+    width: 100%;
+    height: 250px; 
+    object-fit: cover; /* Asegura que la imagen cubra el área sin distorcionarse */
+    display: block;
+    filter: brightness (70%); /* Oscurese la imagen para el texto */
+    transition: transform 0.3s ease, filter 0.5s ease; /* Transición para agrandar y cambiar filtro */
+}
+
+.principle-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color:white;
+    font-weight: bold;
+    padding: 15px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    opacity: 1; /* Siempre visible según la imagen */
+    transition: opacity 0.3s ease-in-out;
+    cursor:pointer; /* Indica que es interactivo */
+}
+
+/* ---- Efecto hover ---- */
+
+/* Cuando el ratón pasa por encima del principle-item */
+.principle-item:hover .principle-overlay {
+    opacity: 1; /* Hace visible el overlay rojo */
+}
+.principle-item:hover img {
+    transform: scale(1.1); /* Agranda la imagen un 10% */
+    filter:  sepia(100%) saturate(300%) hue-rotate(-60deg) brightness(0.6); /* Más oscuro al pasar el ratón */
+
+}
+
+/* Opcional: si quieres que todo el "principle-item" se agrande un poco */
+.principle-item:hover {
+    transform: translateY (-5px); /* Un pequeño levantamiento */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Sombra más oscura en el hover */
+}
+
+.work-section-background {
+    background-color: #E9D1D2; /* color rosa de fondo */
+    padding: 40px 20px; /* Un poco de relleno alrededor del contenido */
+    margin-bottom: 30px; /* Margen inferior para separarlo de la siguiente sección */
+}
+
+.orange-box {
+    background-color: #FBCA30; /* Color naranja de la imagen */
+    padding: 1rem; /* Relleno interno */
+    margin-bottom: 2rem; /* Margen inferior para separar las cajas */
+    border-radius: 1px; /* Bordes ligeramente redondeados */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /*Sombra suave para darle profundidad */
+    color:#202021; /* Color de texto dentro de la caja */
+    font-style: italic; /* Cursiva para la fuente */
+}
+
+/* Estilos para el texto de la fuente dentro de las cajas maranjas */
+.orange-box .source-text {
+    font-size: 0.9rem; /*Tamaño de fuente más pequeño para la fuente */
+    text-align: right; /* Alineación a la derecha como la imagen */
+    margin-top: 0rem; /* Espacio superior para separarlo de la cita */
+    color: #EC3D2C; /* Color rojo para la fuente */
+}
+
+/* Asegúrate de que los estilos section-title y section-description existe y son correctos */
+.section-title {
+    font-size: 2rem; /* Tamaño de la fuente */
+    font-weight: bold;
+    color:#4B0014;
+    margin-bottom: 1rem;
+}
+
+.section-description {
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+    color:#202021;
+    margin-bottom: 1rem; /* Añadir un margen inferior para separar pàrrafos */
+    text-align: justify; /*Importante para justificar el texto */
+}
+
+/* Estilos para las imágenes de activida */
+.activity-img {
+    max-width: 100%; /* Asegura que la imagenes sean responsivas */
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1rem; 
+}
+
+.activity-description {
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+    color:#202021;
+    text-align: justify; /* Importante para justificar el texto */
+    margin-bottom: 2rem;
+}
+
+/* Estilos para el contenedor de la imagen con overlay para la sección Que actividades no son trabajo */
+.activity-item{
+    padding: 15px 0; /* Asegúrate de que .activity-item .col-md-4, .activity-item . col-lg-3 tengan margin-bottom en móvils si aplica */
+}
+
+.activity-principle-item {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shaodw 0.3 ease;
+    height: 200px; /* Asegúrate de la altura */
+}
+
+.activity-principle-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    align-items: center;
+    display: block;
+    filter: brightness(70%);
+    transition: transform 0.3s ease, filter 0.5s ease;
+}
+
+.activity-principle-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+    padding: 15px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+    cursor: pointer;
+    background-color: rgba(187, 87, 91, 0.5); /* fondo semi transparente */
+}
+
+.activity-principle-item:hover .activity-principle-overlay {
+    opacity: 1; /* Hace visible el overlay rojo */
+}
+.activity-principle-item:hover img {
+    transform: scale(1.1); /* Agranda la imagen un 10% */
+    filter:  sepia(100%) saturate(300%) hue-rotate(-60deg) brightness(0.6); /* Más oscuro al pasar el ratón */
+}
+
+/* Opcional: si quieres que todo el "principle-item" se agrande un poco */
+.activity-principle-item:hover {
+    transform: translateY (-5px); /* Un pequeño levantamiento */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* sombre en el hover */
+}
+
+/* Sección de ladrillos - Ajuste clave */
+.message-section-wrapper {
+    background-position: left center, right center;
+    box-sizing: border-box;
+    margin: 0; /* Asegura que no haya márgenes que los separen */
+    background-size: auto 200%; /* Ajusta según el diseño de tu fondo */
+    padding: 10px 0; /* Padding vertical para la sección completa */
+    min-height: 150px; /* Asegura una altura mínima para la sección */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Asegura que el wrapper ocupe todo el ancho disponible */
+}
+
+.message-container {
+    max-width: 1320px; /* Puedes ajustar un max-width general para tu contenido */
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px; /* Añade espacio horizontal para pantallas más pequeñas */
+}
+
+.message-content-box {
+    background-color:#FBCA30; /* Color naraja de la caja */
+    padding: 5px;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+    color: #202021;
+}
+
+/* Nuevas clases para las imágenes de los ladrillos, si necesitas ajustar algo */
+.message-brick-left img,
+.message-brick-right img {
+    width: auto; /* Permite que el ancho se ajuste automáticamente */
+    height: auto; /* Asegura la escala vertical */
+    display: block; /* Para eliminar cualquier espacio extra debajo de la imagen */
+    max-width: 100%; /* Tamaño máximo para los ladrillos en computador de mesa */
+    max-width: 250px; 
+    object-fit: contain; /* Para que la imagen del ladrillo no se recorte si su proporción no encaja */
+}
+
+/* Ajustes opciones para los íconos en listas en Sindicato */
+.work-section-background-yellow {
+    background-color: #FDEAAC; /* color rosa de fondo */
+    padding: 40px 20px; /* Un poco de relleno alrededor del contenido */
+    margin-bottom: 30px; /* Margen inferior para separarlo de la siguiente */
+}
+
+/* Estilos para los iconos de martillo (Bootstrap Icons) en la lista */
+.icon-text-wrapper {
+    display: flex;
+    align-items: center; /* Centra verticalmente el ícono dentro de su wrapper */
+    justify-content: flex-start; /* Centra horizontalmente el ícono */
+    flex-shrink: 0; /* Evita que el wrapper se encoja */
+    width: auto; /* Ancho fijo para el contenedor del ícono */
+    margin-right: 15px; /* Espacio entre el ícono y el texto */
+    transition: transform 0.3s ease-out; /* Transición para el efecto de escala */
+}
+
+/* Color y tamaño base del ícon de martillo */
+.icon-text-wrapper .bi-hammer {
+    font-size: 28px; /* Tamaño del ícono de martillo */
+    color: #4B0014; /* Color rojo para el ícono */
+    transition: font-size 0.9s ease-out; /* Transición para el cambio de tamaño del ícono */
+}
+
+/* Efecto Hover para los iconos de martillo (aplica al wrapper) */
+.icon-text-wrapper:hover {
+    transform: scale(1.5); /* Aumenta el tamaño del contenedor de ícono */    
+}
+
+/* Efecto hover para el ícono específico */
+.icon-text-wrapper:hover .bi-hammer {
+    font-size: 32px; /* O un poco más grande que la base, para un efecto de zoom en el ícono */
+    color:#EC3D2C; /* Un rojo ligeramente más oscuro o brillante para el hover */
+}
+/* Clase para el efecto de scroll down (se aplica con JavaScrip) */
+/* Esta clase se aplicará al .icono-text-wrapper (el contenedor del ícono) */
+.icon-text-wrapper-scrolled {
+    transform: scale(1.5); /* Aumenta más el tamaño del ícno el hacer scroll */
+}
+
+/* Asegura que el color del ícono se mantenga rojo o cambie a un rojo especifico al hacer el scroll */
+.icoon-text-wrapper-scrolled .b-hammer {    
+color: #EC3D2C; /* Puedes mantener este rojo (el que teías)
+font-size: 35px; /* Cambio: hacer e ícono más grande aún al hacer scrollo para más enfasis */
+}
+ /* ------------------------- FOOTER -------------------------------*/
+
+.footer-section {
+    background-color:#202021;
+    padding: 40px 0; /* Añade espacio vertical */
+}
+
+.footer-logo {
+    height: 100px; /* Tamaño del logo en pantallas, se ajusta según lo que necesites */
+    width: auto;
+    max-width: 100%; /* Asegura que no se desborda */
+}
+
+/* Estilos para los títulos de las columnas de footer (la h5) */
+.footer-colum-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #f8f8f8; /* Este color podria ser sobrescrito por el color del enlace */
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+/* Nuevo estilo para los enlaces dentro de los títulos (para que mantengan el aspecto del título */
+.footer-link-title {
+    color: #cccccc; /* Hereda el color del padre (footer-colum-title o fotter-section) */
+    text-decoration: none; /* Elmina el subrayado por defecto */
+}
+
+.footer-link-title:hover {
+    color: #ffffff; /* Cambia a blanco al pasar el ratón */
+}
+
+/* Tus estilos existentes para los enlaces normales del footer */
+.footer-link {
+    color: #cccccc;
+    text-decoration: none;
+    font-size: 0.9rem;
+    line-height: 1.8;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #ffffff;
+}
+
+/* --- Media Queries para responsividad --- */
+@media (max-width: 767.98px) {
+
+    .navbar-logo {
+        height: 40px; /* Ajusta la altura de tu logo según tus necesidades */
+        width: auto; /* Mantiene la proporción de la imagen */
+        margin-right: 5px; /* Espacios a la derecha del logo si hay texto o elementos al lado */
+    }
+
+    .navbar-collapse {
+        background-color: #333; /* fondo oscuro para el menú movil */
+        padding: 1rem;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-mav .nav-item {
+        width: 100%;
+        margin-bottom: 0.25rem;
+    }
+    .navbar-nav .nav-link {
+        padding: 0.75rem 1rem;
+        background-color: #f8f9fa; /* fondo más claro para los links en movil */
+        color: #333 !important;
+        border-radius: 0.25rem;
+        text-align: center;
+    }
+    .navbar-nav .dropdown-menu {
+        position: static !important;
+        transform: none !important;
+        width: 100%;
+        margin-top: 0.25rem;
+        border: none;
+        box-shadow: none;
+        background-color: #f8f9fa; /* fondo más claro para el dropdowns en el menú */
+    }
+    .navbar-nav .dropdown-toggle {
+        background-color: #f8f9fa;
+        color: #333 !important;
+    }
+    .dropdown-submenu > .dropdown-menu {
+        position: static !important;
+        transform: none !important;
+        left: auto !important;
+        margin-top: 0 !important;
+        margin-left: 0 !important;
+        border: none;
+        box-shadow: none;
+        background-color: #f8f9fa;
+        padding-left: 1rem;
+    }
+
+    /* Ajustes de carrusel para moviles */
+    .carousel-item {
+        height: 50vh; /* reduced la altura en los moviles */
+        min-height: 300px;
+    }
+
+    .carousel-caption h5 {
+        font-size: 1.8rem; /* Título más pequeño en moviles */
+    }
+
+    .carousel-caption p {
+        font-size: 0.9rem /* Parrafo más pequeño en el movil */
+    }
+
+    .carousel-caption .btn-lg  {
+        padding: 10px 20px;
+        font-size: 0.9rem;
+    }
+
+    /* Principales section ajustes para movil */
+    .section-title {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .principle-item img {
+        height: 180px; /* Ajusta altura de la imagen en el movil */
+    }
+
+    .principle-overlay {
+        font-size: 1rem; /* Ajusta el tamaño del texto para mejor legibilidad */ 
+    }
+
+    /* Ajuste de activity section para movil */
+    .activity-principel-item {
+        height: 180px; /* Ajsuta la altura para el movil */
+    }
+
+    /* Ajuste en message section para movil */
+    .message-section-wrapper {
+        /* Mantén tus estilos de fondo y centrado */
+        padding: 20px 0px; /* añade espacio horizontal */
+    }
+    
+    .message-container-box {
+        /* No necesitas márgenes laterales en móviles si los ladrillos estan ocultos */
+        padding: 0 15px; /* Padding horizontal para asegurar que no se pegue a los borde */
+    }
+
+    /* Asegura que las imágenes de ladrillos se comporten bien */
+    .message-brick-left img,
+    .message-brick-right img {
+        width: auto;
+        height: auto; /* Permite que la altura se ajuste */
+        max-height: 200px; /* Limita la altura máxima de los ladrillo */
+        max-width: 100px; /* Limita el ancho máximo para que no sean gigantes */
+        display: block; 
+    }
+
+    .message-content-box {
+        padding: 20px;
+    }
+
+    /* Footer adjustments for mobile */
+
+    .footer-logo {
+        height: 60px; /* Tamaño más pequeño para logo en móviles */
+        width: auto;
+    }
+
+    .footer-section .col-md-4 { /* Ajusta según la estructura de tu footer */
+        text-align: center !important;
+    }
+
+    .footer-colum-title {
+        text-align: center;
+        margin-top: 1.5rem;
+    }
+
+    .footer-link {
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /* Tablet adjustments */
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    .principle-item img {
+        height: 200px; /* Adjust image height on tablets */
+    }
+
+    .carousel-item {
+        height: 60vh; /* Reduced height on tablets */
+    }
+
+    .carousel-caption h5 {
+        font-size: 2.5rem; /* Titles smaller on tablets */
+    }
+
+    .carousel-caption .btn-lg {
+        padding: 12px 25px;
+        font-size: 1.1rem;
+    }
+
+    /* Message section adjustments for tablets */
+    .message-section-wrapper {
+        padding: 20px; /* Add more horizontal padding */
+    }
+
+    .message-brick-left img,
+    .message-brick-right img {
+        max-height: 180px; /* Ladrillos un poco más pequeños en tablets */
+        max-width: 90px;
+    }
+
+    .message-content-box {
+        padding: 18px; /* Ajusta padding en tablets */
+    }
+
+    .section-icon-large {
+        max-width: 80px;
+    }
+
+    .start-icon-large {
+        max-width: 60px;
+    }
+
+    .icon-text-wrapper {
+        width: 28px;
+        height: 28px;
+        margin-right: 12px;
+    }
+
+    .icon-text-wrapper .bi-hammer {
+        font-size: 22px;
+    }
+
+    /* Woman's Day section adjustments (assuming this is related to .col-md-4 and .col-md-8) */
+    .col-md-4 {
+        order: 1;
+    }
+    .col-md-8 {
+        order: 2;
+    }
+
+    .img-fluid {
+        max-width: 90%; /* Adjust image width on tablets */
+    }
+
+    .footer-logo {
+        height: 80px; /* Tamaño intermedio para tablet */
+        width: auto;
+    }
+}
+
+/* General improvements for larger screens (desktop first approach or just refining) */
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .dropdown-menu {
+        margin-top: 0; /* Reset margin for larger screens */
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.175); /* Restore dropdown shadow */
+    }
+    .dropdown-submenu:hover > .dropdown-menu {
+        display: block;
+    }
+}
+
