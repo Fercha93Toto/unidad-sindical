@@ -17,13 +17,22 @@ body {
 }
 
 .navbar-brand, .nav-link {
+    font-size: 1rem; /* Define el tamaño de la fuente para evitar fluctuaciones */
+    padding: 0.5rem 1rem; /*Asegura un padding constante, ajusta si es necesario */
+    transition: none !important; 
+    transform: none !important;
+    white-space: nowrap; /* Evita que el texto se rompa en varias líneas si el espacio es justo */
     color: #202021 !important; /* Texto negro para los enclaces de navbar */
     font-weight: bold;
 }
 
-.nav-link:hover {
+.navbar-bramd, .nav-link:hover {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    transition: none !important; 
+    transform: none !important;
     color: #FBCA30 !important; /* Texto amarillo para los enclaces de navbar */
-    font-family: strong;
+    font-weight: bold;
 }
 
 /* Estilo general para los dropdown-menu (todos los niveles) */

@@ -1,0 +1,324 @@
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    line-height: 1.6;
+    color:#333;
+}
+
+/* --- Estilos para el menú desplegable en la Navbar ---*/
+/* Colores de fondo de la Navbar */
+.navbar {
+    background-color: #BB575B !important; /*Fondo de la barra de navegació */
+}
+
+.navbar-logo {
+    height: 80px; /* Ajusta la altura de tu logo según tus necesidades */
+    width: auto; /* Mantiene la proporción de la imagen */
+    margin-right: 10px; /*Espacio a la derecha del ogo si hay texto o elementros al lado */
+}
+
+.navbar-brand, .nav-link {
+    font-size: 1rem; /* Define el tamaño de la fuente para evitar fluctuaciones */
+    padding: 0.5rem 1rem; /*Asegura un padding constante, ajusta si es necesario */
+    transition: none !important; 
+    transform: none !important;
+    white-space: nowrap; /* Evita que el texto se rompa en varias líneas si el espacio es justo */
+    color: #202021 !important; /* Texto negro para los enclaces de navbar */
+    font-weight: bold;
+}
+
+.navbar-bramd, .nav-link:hover {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    transition: none !important; 
+    transform: none !important;
+    color: #FBCA30 !important; /* Texto amarillo para los enclaces de navbar */
+    font-weight: bold;
+}
+
+/* Estilo general para los dropdown-menu (todos los niveles) */
+.dropdown-menu {
+    background-color: #F7E29D; /* Fondo amarillos claro para los menús */
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    padding: 0; /* Quitar padding por defecto para controlar los item */
+}
+
+/* Estilo para los items individuales dentro del cualquier dropdown-menu */
+.dropdown-item {
+    color:#333; /* Color de texto negro */
+    padding: 0.75rem 1.25rem; /* Relleno */
+    text-decoration: none;
+    display: block; /* Para que ocupe todo el ancho */
+    transition: background-color 0.3s ease-in-out;
+    white-space: nowrap; /* vita que es texto se rompa */
+}
+
+.dropdown-item:hover{
+    background-color: #FBCA30; /* Fondo amarillo intenso al pasar el ratón */
+    Color: #202021 !important; /* texto negro */
+}
+
+/* --- Estilos especificos para los submenús animados (2do, 3er, nivel, etc) ---*/
+
+.dropdown-submenu {
+    position: relative; /* Crucial para posiciona el submenú anidado */
+}
+
+.dropdown-submenu > .dropdown-menu {
+    top: 0; /* Alinea la parte superior del submenú con la del elememto padre */
+    left: 100%; /*Coloca el submenu a la derecha del elemento padre */
+    margin-top: 0px; /* Ajueste fino para alineación vertical */
+    margin-left: 0px; /* Ajuste fino para alinear horizaontal */
+    display: none; /* Oculta el submenú por defecto */
+} 
+
+/* Mostrar el submenú anidado al pasar el ratón */
+.dropdown-submenu:hover > .dropdown-menu {
+    display: block; /* Muestra el submenú al hacer hover sobre el li.dropdown-submenu */
+}
+
+/* Asegúrate de que los estilos section-title y section-description existe y son correctos */
+.section-title {
+    font-size: 2rem; /* Tamaño de la fuente */
+    font-weight: bold;
+    color:#4B0014;
+    margin-bottom: 1rem;
+}
+
+.section-description {
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+    color:#202021;
+    margin-bottom: 1rem; /* Añadir un margen inferior para separar pàrrafos */
+    text-align: justify; /*Importante para justificar el texto */
+}
+
+/* Estilos para la imagen del encabzado (la paleta o trowell) */
+#que-se-entiende-por-pobreza .img-fluid {
+    max-width: 400px;
+    margin-bottom: 20px; 
+}
+
+.principle-overlay {
+        font-size: 1rem; /* Ajusta el tamaño del texto para mejor legibilidad */ 
+}
+
+/* Ajuste de activity section para movil */
+.activity-principel-item {
+        height: 180px; /* Ajsuta la altura para el movil */
+}
+
+/* Estilos para los iconos de martillo (Bootstrap Icons) en la lista */
+.icon-text-wrapper {
+    display: flex;
+    align-items: center; /* Centra verticalmente el ícono dentro de su wrapper */
+    justify-content: flex-start; /* Centra horizontalmente el ícono */
+    flex-shrink: 0; /* Evita que el wrapper se encoja */
+    width: auto; /* Ancho fijo para el contenedor del ícono */
+    margin-right: 15px; /* Espacio entre el ícono y el texto */
+    transition: transform 0.3s ease-out; /* Transición para el efecto de escala */
+}
+
+/* Color y tamaño base del ícon de martillo */
+.icon-text-wrapper .bi-nut-fill {
+    font-size: 28px; /* Tamaño del ícono de martillo */
+    color: #4B0014; /* Color rojo para el ícono */
+    transition: font-size 0.9s ease-out; /* Transición para el cambio de tamaño del ícono */
+}
+
+/* Efecto Hover para los iconos de martillo (aplica al wrapper) */
+.icon-text-wrapper:hover {
+    transform: scale(1.5); /* Aumenta el tamaño del contenedor de ícono */    
+}
+
+/* Efecto hover para el ícono específico */
+.icon-text-wrapper:hover .bi-nut-fill {
+    font-size: 32px; /* O un poco más grande que la base, para un efecto de zoom en el ícono */
+    color:#EC3D2C; /* Un rojo ligeramente más oscuro o brillante para el hover */
+}
+/* Clase para el efecto de scroll down (se aplica con JavaScrip) */
+/* Esta clase se aplicará al .icono-text-wrapper (el contenedor del ícono) */
+.icon-text-wrapper-scrolled {
+    transform: scale(1.5); /* Aumenta más el tamaño del ícno el hacer scroll */
+}
+
+/* Asegura que el color del ícono se mantenga rojo o cambie a un rojo especifico al hacer el scroll */
+.icon-text-wrapper-scrolled .bi-nut-fill {    
+color: #EC3D2C; /* Puedes mantener este rojo (el que teías)
+font-size: 35px; /* Cambio: hacer e ícono más grande aún al hacer scrollo para más enfasis */
+}
+
+/* ------------------------- FOOTER -------------------------------*/
+
+.footer-section {
+    background-color:#202021;
+    padding: 40px 0; /* Añade espacio vertical */
+}
+
+.footer-logo {
+    height: 100px; /* Tamaño del logo en pantallas, se ajusta según lo que necesites */
+    width: auto;
+    max-width: 100%; /* Asegura que no se desborda */
+}
+
+/* Estilos para los títulos de las columnas de footer (la h5) */
+.footer-colum-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #f8f8f8; /* Este color podria ser sobrescrito por el color del enlace */
+    margin-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+/* Nuevo estilo para los enlaces dentro de los títulos (para que mantengan el aspecto del título */
+.footer-link-title {
+    color: #cccccc; /* Hereda el color del padre (footer-colum-title o fotter-section) */
+    text-decoration: none; /* Elmina el subrayado por defecto */
+}
+
+.footer-link-title:hover {
+    color: #ffffff; /* Cambia a blanco al pasar el ratón */
+}
+
+/* Tus estilos existentes para los enlaces normales del footer */
+.footer-link {
+    color: #cccccc;
+    text-decoration: none;
+    font-size: 0.9rem;
+    line-height: 1.8;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.footer-link:hover {
+    color: #ffffff;
+}
+
+/* --- Media Queries para responsividad --- */
+@media (max-width: 767.98px) {
+
+.navbar-logo {
+        height: 40px; /* Ajusta la altura de tu logo según tus necesidades */
+        width: auto; /* Mantiene la proporción de la imagen */
+        margin-right: 5px; /* Espacios a la derecha del logo si hay texto o elementos al lado */
+    }
+
+    .navbar-collapse {
+        background-color: #333; /* fondo oscuro para el menú movil */
+        padding: 1rem;
+    }
+
+    .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .navbar-mav .nav-item {
+        width: 100%;
+        margin-bottom: 0.25rem;
+    }
+    .navbar-nav .nav-link {
+        padding: 0.75rem 1rem;
+        background-color: #f8f9fa; /* fondo más claro para los links en movil */
+        color: #333 !important;
+        border-radius: 0.25rem;
+        text-align: center;
+    }
+    .navbar-nav .dropdown-menu {
+        position: static !important;
+        transform: none !important;
+        width: 100%;
+        margin-top: 0.25rem;
+        border: none;
+        box-shadow: none;
+        background-color: #f8f9fa; /* fondo más claro para el dropdowns en el menú */
+    }
+    .navbar-nav .dropdown-toggle {
+        background-color: #f8f9fa;
+        color: #333 !important;
+    }
+    .dropdown-submenu > .dropdown-menu {
+        position: static !important;
+        transform: none !important;
+        left: auto !important;
+        margin-top: 0 !important;
+        margin-left: 0 !important;
+        border: none;
+        box-shadow: none;
+        background-color: #f8f9fa;
+        padding-left: 1rem;
+    }
+
+/* Principales section ajustes para movil */
+    .section-title {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+/* Ajuste en message section para movil */
+    .message-section-wrapper {
+        /* Mantén tus estilos de fondo y centrado */
+        padding: 20px 0px; /* añade espacio horizontal */
+    }
+
+.footer-logo {
+        height: 60px; /* Tamaño más pequeño para logo en móviles */
+        width: auto;
+    }
+
+    .footer-section .col-md-4 { /* Ajusta según la estructura de tu footer */
+        text-align: center !important;
+    }
+
+    .footer-colum-title {
+        text-align: center;
+        margin-top: 1.5rem;
+    }
+
+    .footer-link {
+        text-align: center;
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+    /* Tablet adjustments */
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+/* Message section adjustments for tablets */
+    .message-section-wrapper {
+        padding: 20px; /* Add more horizontal padding */
+    }
+
+    .message-brick-left img,
+    .message-brick-right img {
+        max-height: 180px; /* Ladrillos un poco más pequeños en tablets */
+        max-width: 90px;
+    }
+
+    .icon-text-wrapper {
+        width: 28px;
+        height: 28px;
+        margin-right: 12px;
+    }
+
+    .icon-text-wrapper .bi-nut-fill {
+        font-size: 22px;
+    }
+
+     .footer-logo {
+        height: 80px; /* Tamaño intermedio para tablet */
+        width: auto;
+    }
+}
+
+/* General improvements for larger screens (desktop first approach or just refining) */
+@media (min-width: 992px) {
+    .navbar-expand-lg .navbar-nav .dropdown-menu {
+        margin-top: 0; /* Reset margin for larger screens */
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.175); /* Restore dropdown shadow */
+    }
+    .dropdown-submenu:hover > .dropdown-menu {
+        display: block;
+    }
+}
