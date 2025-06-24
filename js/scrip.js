@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function(){
     // y asegura que los clicks en los elementos 'dropdown-toggle' de submenùs no cierrren el dropdown principal 
 
     // Selecciona todos los 'dropdowns-toggle' que están dentro de un 'dropdown-submenu'
-    document.querySelectorAll('.dropdown-menu . dropdown-submenu .dropdown-toggle'). forEach (function(element){
+    document.querySelectorAll('.dropdown-menu .dropdown-submenu .dropdown-toggle'). forEach (function(element){
         element.addEventListener('click', function (e) {
             let nextEl = this.nextElementSibiling; // El  'ul.dropdown-menu' asociado a este toggle
 

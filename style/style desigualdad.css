@@ -147,8 +147,51 @@ color: #EC3D2C; /* Puedes mantener este rojo (el que teías)
 font-size: 35px; /* Cambio: hacer e ícono más grande aún al hacer scrollo para más enfasis */
 }
 
-/* ------------------------- FOOTER -------------------------------*/
+.message-content-box-inequality {
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Asegura que el wrapper ocupe todo el ancho disponible */
+    color:#202021; /* Color de texto dentro de la caja */
+    font-style: italic; /* Cursiva para la fuente */
+}
 
+.message-content-box-inequality p {
+    margin-bottom: 0.5rem; /* Pequeño margen entre párrafo, si hay más de uno */
+    line-height: 1.6; /* Espacio entr líneas para mejorar la lectura */
+}
+
+.source-text {
+    font-size: 0.9rem; /*Tamaño de fuente más pequeño para la fuente */
+    text-align: right; /* Alineación a la derecha como la imagen */
+    margin-top: 0rem; /* Espacio superior para separarlo de la cita */
+    color: #EC3D2C; /* Color rojo para la fuente */
+}
+
+/* Nuevas clases para las imágenes de los ladrillos, si necesitas ajustar algo */
+.message-brick-left img,
+.message-brick-right img {
+    width: auto; /* Permite que el ancho se ajuste automáticamente */
+    height: auto; /* Asegura la escala vertical */
+    display: block; /* Para eliminar cualquier espacio extra debajo de la imagen */
+    max-width: 100%; /* Tamaño máximo para los ladrillos en computador de mesa */
+    max-width: 250px; 
+    object-fit: contain; /* Para que la imagen del ladrillo no se recorte si su proporción no encaja */
+}
+
+/* Ajustes opciones para los íconos en listas en Sindicato */
+.work-section-background-yellow {
+    background-color: #FDEAAC; /* color rosa de fondo */
+    padding: 40px 20px; /* Un poco de relleno alrededor del contenido */
+    margin-bottom: 30px; /* Margen inferior para separarlo de la siguiente */
+}
+.table-container {
+    font-size: 1.1rem; /* Tamaño del tìtulos de la tabla */
+    font-weight: bold;
+    color:#EC3D2C; /*Color del título */
+    text-align: center;
+}
+
+/* ------------------------- FOOTER -------------------------------*/
 .footer-section {
     background-color:#202021;
     padding: 40px 0; /* Añade espacio vertical */
