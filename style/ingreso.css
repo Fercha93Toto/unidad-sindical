@@ -1,0 +1,185 @@
+/* Estilos globales */
+body {
+    margin: 60px;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #FDEAAC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+
+/* Contenedor del formulario de login */
+.login-container {
+    background-color: #fff; /* Color de fondo */
+    padding: 30px 40px; /* Espacio interno */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra */
+    text-align: center;
+    width: 100%;
+    max-width: 400px; /* Ancho maximo del formulario% */
+    box-sizing: border-box;
+}
+
+.logo-container {
+    text-align:center;
+}
+
+.logo {
+    height: 200px; /* Ajusta el tamaño del logo */
+    margin-left: 15px; /* Espacio entre el título y el logo */
+    object-fit: cover;
+    text-align: center;
+}
+
+h2 {
+    text-align: center; /* Alineación del texto */
+    font-size: 2em; /* Tamaño de la fuente */
+    font-weight: bold;
+    color:#4B0014;
+    margin-bottom: 30px;
+}
+
+.login-form input[type="text"],
+.login-form input[type="password"],
+.login-form input[type="email"],
+.login-form input[type="number"],
+.login-form input[type="date"]{
+    width: 100%;
+    padding: 12px;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; /* Inlcute padding en el ancho */
+}
+
+.login-form input::placeholder {
+    color: #bbb;
+}
+
+/* Estilos del botón del login */
+.login-btn {
+    width: 100%;
+    padding: 15px; /* Espaciado interno */
+    background-color: #4B0014; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* sin bordes */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño de la fuente */
+    font-weight: bold;
+    cursor: pointer; /* Cursor al pasar el ratón */
+    transition: background-color 0.3s ease; /* Transiciòn al pasar el ratón */
+}
+
+.login-btn:hover {
+    background-color:#EC3D2C; /* Color de fondo al pasar el ratón */
+}
+
+/* Estilos del enlace de contraseña olvidada */
+.forgot-password, .register{
+    text-align: center; /* Alineación del texto */
+}
+
+.forgot-password a, .register a {
+    color: #EC3D2C; /* Color del texto */
+    text-decoration: none; /* Sin subrayado */
+    font-size: 15px; /* Tamaño de la fuente */
+}
+
+
+.forgot-password a:hover, .register a:hover{
+    text-decoration: underline; /* Subrayado al pasar el ratón */
+    color:#202021;
+}
+
+/* Estilos de formulario */ 
+.login-form {
+    display: flex; /* Flexbox para alienar los elementos */
+    flex-direction: column; /* Alineación de los elementos en columna */
+}
+
+/* Estilos de los campos de entrada */
+.input-group {
+    position: relative;
+}
+
+label {
+    font-size: 0.9rem; /* Tamaño de la fuente */
+    color: #333; /*  Color del texto */
+}
+
+input[type="text"], 
+input[type="password"], 
+input[type="email"],
+input[type="number"],
+input[type="date"]{
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+    color:#202021;
+    margin-bottom: 10px; /* Añadir un margen inferior para separar parrafos */
+    width: 100%; /* Ancho del 100% */
+    padding: 10px; /* Espaciado interno */
+    border: 1px solid #ddd; /* Borde del campo de entrada */
+    border-radius: 5px; /* Bordes redondeados */
+    font-size: 1rem; /* Tamaño de la fuente */
+    outline: none; /* Elimina el borde alrededor del campo de entrada */
+}
+
+input[type="text"]:focus, 
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus {
+    font-size: 1rem;
+    line-height: 1.6rem;
+    color:#202021;
+    border-color: #fff; /* Color del borde al hacer foco */
+}
+
+
+/* Estilos para los mensajes de respuesta (éxito/error) */
+.message {
+    margin-top: 15px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Estilos para el moda de Bootstrap (si lo usas para restablecer contraseña) */
+.modal-content {
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.modal-header {
+    background-color: #4B0014;
+    color: white;
+    border-bottom: none;
+}
+
+.modal-title {
+    font-weight: bold;
+}
+
+.modal-footer {
+    border-top: none;
+}
+.btn-primaty {
+    background-color: #4B0014;
+    border-color: #4B0014;
+}
+
+.btn-primary:hover {
+    background-color: #4B0014;
+    border-color: #4B0014;
+
+}
+
+.input-icons {
+    width: 20px;
+    position: absolute;
+    right: 5px;
+}
+
+.buttom .submit {
+    color:#4B0014
+}
